@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    overflow: hidden;
+    background:red url(210.png) repeat-x;
+    height: 200px;
+    position: relative;
+    border-bottom: 10px solid sienna;
+}
+
+#mario {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    background: url(mario-pixel-02_render.png) no-repeat;
+    left: -50px;
+    top: 150px;
+    -webkit-animation: move-mario 20s alternate;
+}
+
+#carapace {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    background: url(carapace_rouge.png) no-repeat;
+    right: -30px;
+    top: 170px;
+    -webkit-animation: move-cara 10s alternate;
+}
+
+#marron {
+    width: 130px;
+    height: 40px;
+    position: absolute;
+    background: url(cube_marron.jpg) no-repeat;
+    left: 20%;
+    top: 53%;
+}
+
+#jaune {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background: url(cube_jaune.jpg)no-repeat;
+    right: 40%;
+    top: 53%;
+}
+
+/*
+    animation
+*/
+
+@-webkit-keyframes move-mario {
+    0%  {top: 150px; left: -50px;}
+    10% {top: 150px; left: 160px}
+    20% {top: 55px; left: 160px;}
+    30% {top: 55px;left: 340px;}
+    40% {top: 150px;left: 340px}
+    50% {top: 150px; left: 500px;}
+    100% {top: 150px; left: 1500px;}
+}
+
+@-webkit-keyframes move-cara{
+    from {right: -30px}
+    to {right: 1500px;}
+}
