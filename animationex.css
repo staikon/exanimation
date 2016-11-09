@@ -48,6 +48,8 @@ header {
     background: url(cube_jaune.jpg)no-repeat;
     right: 60%;
     top: 47%;
+    -webkit-animation:change 10s linear infinite;
+    
 }
 
 #jaune2 {
@@ -55,8 +57,9 @@ header {
     height: 40px;
     position: absolute;
     background: url(jaune_2.jpg);
-    right: 40%;
+    right: 60%;
     top: 47%;
+    -webkit-animation : change2 20s linear infinite;
 }
 
 /*
@@ -77,4 +80,14 @@ header {
 @-webkit-keyframes move-cara{
     from {right: -30px}
     to {right: 2000px;}
+}
+
+@-webkit-keyframes change{
+    0% opacity : 0;
+    10% opacity 1;
+}
+
+@-webkit-keyframes change2{
+    0% opacity : 1;
+    10% opacity: 0;
 }
