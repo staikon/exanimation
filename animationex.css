@@ -37,8 +37,8 @@ header {
     height: 40px;
     position: absolute;
     background: url(cube_marron.jpg) no-repeat;
-    left: 15%;
-    top: 53%;
+    left: 180px;
+    bottom: 55px;
 }
 
 #jaune {
@@ -46,9 +46,9 @@ header {
     height: 40px;
     position: absolute;
     background: url(cube_jaune.jpg)no-repeat;
-    right: 60%;
-    top: 47%;
-    -webkit-animation:change 10s linear infinite;
+    left: 473px;
+    bottom: 65px;
+    -webkit-animation: change  linear ;
     
 }
 
@@ -56,10 +56,20 @@ header {
     width: 40px;
     height: 40px;
     position: absolute;
-    background: url(jaune_2.jpg);
+    background: url(jaune_2.jpg) no-repeat;
     right: 60%;
     top: 47%;
-    -webkit-animation : change2 20s linear infinite;
+    -webkit-animation: change2 22s linear ;
+}
+
+#champi {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background: url(001.png) no-repeat;
+    right: 60%;
+    top: 47%;
+    -webkit-animation: champi 24s linear; 
 }
 
 /*
@@ -68,12 +78,12 @@ header {
 
 @-webkit-keyframes move-mario {
     0%  {top: 150px; left: -50px;}
-    5%  {top: 150px; left: 140px;}
+    5%  {top: 150px; left: 110px;}
     10% {top: 55px ; left: 140px;}
     15% {top: 55px ; left: 310px;}
     20% {top: 150px; left: 410px;}
-    22% {top: 130px; left: 450px;}
-    24% {top: 150px; left: 470px;}
+    22% {top: 130px; left: 460px;}
+    24% {top: 150px; left: 480px;}
     100% {top: 150px; left: 1500px;}
 }
 
@@ -83,11 +93,24 @@ header {
 }
 
 @-webkit-keyframes change{
-    0% opacity : 0;
-    10% opacity 1;
+    0%  {opacity : 1;}
+    15% {opacity: 1;}
+    16% {opacity: 0;}
+    100% {opacity: 0;}
 }
 
 @-webkit-keyframes change2{
-    0% opacity : 1;
-    10% opacity: 0;
+    0%  {opacity : 0;}
+    15% {opacity : 0;}
+    16% {opacity : 1;}
+    100% {opacity: 1;}
+}
+
+@-webkit-keyframes champi{
+    0%  {top: 90px ; left: 470px; opacity: 0;}
+    14% {top: 90px ; left: 470px; opacity: 0;}
+    15% {top: 50px ; left: 470px; opacity: 1;}
+    20% {top: 150px; left: 570px;}
+    21% {top: 150px; opacity: 1}
+    23% {opacity: 0}
 }
