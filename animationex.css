@@ -18,8 +18,8 @@ header {
     position: absolute;
     background: url(mario-pixel-02_render.png) no-repeat;
     left: -50px;
-    top: 150px;
-    -webkit-animation: move-mario 20s alternate;
+    bottom: 0px;
+    -webkit-animation: move-mario 15s linear;
 }
 
 #carapace {
@@ -28,8 +28,8 @@ header {
     position: absolute;
     background: url(carapace_rouge.png) no-repeat;
     right: -30px;
-    top: 170px;
-    -webkit-animation: move-cara 10s alternate;
+    bottom: 0px;
+    -webkit-animation: move-cara 5s linear;
 }
 
 #marron {
@@ -37,7 +37,7 @@ header {
     height: 40px;
     position: absolute;
     background: url(cube_marron.jpg) no-repeat;
-    left: 20%;
+    left: 15%;
     top: 53%;
 }
 
@@ -46,8 +46,17 @@ header {
     height: 40px;
     position: absolute;
     background: url(cube_jaune.jpg)no-repeat;
+    right: 60%;
+    top: 47%;
+}
+
+#jaune2 {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background: url(jaune_2.jpg);
     right: 40%;
-    top: 53%;
+    top: 47%;
 }
 
 /*
@@ -56,15 +65,16 @@ header {
 
 @-webkit-keyframes move-mario {
     0%  {top: 150px; left: -50px;}
-    10% {top: 150px; left: 160px}
-    20% {top: 55px; left: 160px;}
-    30% {top: 55px;left: 340px;}
-    40% {top: 150px;left: 340px}
-    50% {top: 150px; left: 500px;}
+    5%  {top: 150px; left: 140px;}
+    10% {top: 55px ; left: 140px;}
+    15% {top: 55px ; left: 310px;}
+    20% {top: 150px; left: 410px;}
+    22% {top: 130px; left: 450px;}
+    24% {top: 150px; left: 470px;}
     100% {top: 150px; left: 1500px;}
 }
 
 @-webkit-keyframes move-cara{
     from {right: -30px}
-    to {right: 1500px;}
+    to {right: 2000px;}
 }
