@@ -16,7 +16,7 @@ header {
     height: 50px;
     width: 50px;
     position: absolute;
-    background: url(mario_debout.png) no-repeat;
+    background: url(mario_debout4.png) no-repeat;
     left: -50px;
     bottom: 0px;
     -webkit-animation: move-mario 15s linear;
@@ -87,9 +87,9 @@ header {
     height: 100px;
     position: absolute;
     background: url(fleur.png) no-repeat;
-    bottom: -40%;
-    right: 40%;
-    -webkit-animation: move-fleur 4s 4s linear infinite;
+    bottom: -100px;
+    right: 510px;
+    -webkit-animation: move-fleur 3s 6s linear;
         
 }
 
@@ -98,19 +98,21 @@ header {
     height: 40px;
     position: absolute;
     background: url(tube.png) no-repeat;
-    bottom: 0%;
-    right: 40%;
-    
+    bottom: 0px;
+    right: 510px;  
 }
 
 #bowser{
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     position: absolute;
     background: url(Bowser.png) no-repeat;
-    bottom: 0%;
-    right: -20%;
-    -webkit-animation: move-bowser 4s 6s linear;
+    bottom: 0px;
+    right: -60px;
+    -webkit-animation: 
+        shimmy-shimmy-shake 0.5s 6s infinite alternate,
+        move-bowser 4s 6s linear;
+    
 }
 /*
     animation
@@ -130,7 +132,22 @@ header {
     24.5%{top: 150px; left: 480px; opacity: 1; height: 50px;}
     29%  {top: 150px; left: 550px; opacity: 1; height: 50px;}
     30%  {top: 130px; left: 550px; opacity: 1; height: 70px;}
-    100% {top: 150px; left: 1500px; opacity: 1}
+    40%  {top: 130px; left: 645px; opacity: 1; height: 70PX;}
+    40.5%{top: 130px; left: 645px; opacity: 0; height: 70px;}
+    45%  {top: 90px ; left: 700px; opacity: 0; height: 70px;}
+    45.5%{top: 90px ; left: 700px; opacity: 0; height: 50px;}
+    50%  {top: 150px; left: 800px; opacity: 0; height: 50px;}
+    50.5%{top: 150px; left: 800px; opacity: 1;}
+    60%  {top: 150px; left: 1000px; opacity: 1;}
+    65%  {top: 150px; left: 950px; opacity: 1;}
+    70%  {top: 150px; left: 1000px; opacity: 1}
+    75%  {top: 150px; left: 950px; opacity: 1}
+    80%  {top: 150px; left: 1100px; opacity: 1}
+    80.5%{top: 150px; left: 1100px; opacity: 0}
+    85%  {top: 100px; left: 1150px; opacity: 0}
+    85.5%{top: 100px; left: 1150px; opacity: 1}
+    90%  {top: 50px ; left: 1150px; opacity: 1}
+    100% {top: 2000px; left: 1150px; opacity: 1;}
 }
 
 @-webkit-keyframes mario_saut{
@@ -145,7 +162,24 @@ header {
     22%  {top: 130px; left: 460px; opacity: 1}
     24%  {top: 150px; left: 480px; opacity: 1}
     24.5%{top: 150px; left: 480px; opacity: 0}
-    100% {top: 150px; left: 1500px; opacity: 0}
+    29%  {top: 150px; left: 550px; opacity: 0; height: 50px;}
+    30%  {top: 130px; left: 550px; opacity: 0; height: 70px;}
+    40%  {top: 130px; left: 645px; opacity: 0; height: 70PX;}
+    40.5%{top: 130px; left: 645px; opacity: 1; height: 70px;}
+    45%  {top: 90px ; left: 700px; opacity: 1; height: 70px;}
+    45.5%{top: 90px ; left: 700px; opacity: 1; height: 50px;}
+    50%  {top: 150px; left: 800px; opacity: 1; height: 50px;}
+    50.5%{top: 150px; left: 800px; opacity: 0;}
+    60%  {top: 150px; left: 900px; opacity: 0;}
+    65%  {top: 150px; left: 950px; opacity: 0;}
+    70%  {top: 150px; left: 1000px; opacity: 0;}
+    75%  {top: 150px; left: 950px; opacity: 0;}
+    80%  {top: 150px; left: 1100px; opacity: 0;}
+    80.5%{top: 150px; left: 1100px; opacity: 1;}
+    85%  {top: 100px; left: 1150px; opacity: 1;}
+    85.5%{top: 100px; left: 1150px; opacity: 0;}
+    90%  {top: 50px ; left: 1150px; opacity: 0;}
+    100% {top: 2000px; left: 1150px; opacity: 0;}
 }
 
 @-webkit-keyframes move-cara{
@@ -178,12 +212,17 @@ header {
 }
 
 @-webkit-keyframes move-fleur{
-    0%{bottom: -40%}
-    50%{bottom: 15%}
-    100%{bottom: -40%}
+    0%   {bottom: -100px;}
+    50%  {bottom: 40px;}
+    100% {bottom: -100px;}
 }
 
 @-webkit-keyframes move-bowser{
-   from {right: -20%}
-    to {right: 20%}
+   from {right: -60px}
+    to {right: 50px;}
+}
+
+@-webkit-keyframes shimmy-shimmy-shake {
+	from { right: 50px; }
+    to   { right: 60px; }
 }
